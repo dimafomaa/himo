@@ -1,0 +1,389 @@
+body{ /*значения для всего макета*/
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+}
+html{
+	scroll-behavior: smooth; /*делает плавную прокрутку по странице при нажатии кнопки*/
+}
+.container{
+	max-width: 1220px; /*ширина контейнера на странице*/
+	padding: 0 10px;/*отступы слева/справа что бы контент не прилипал к краям*/
+	margin: 0 auto; /*выравнивает контейнер по центру в горизонтале*/
+}
+.header__inner{
+	display: flex; /*делает контент в строку*/
+	justify-content: space-between; /*разбрасывает контент по краям строки*/
+	align-items: center; /*контент в шапке выравнивается по вертикали*/
+}
+.menu{
+	margin-right: 70px; /*отступ справа всего блока-родителя*/
+}
+.menu__list{
+	display: flex;/*делает контент в строку*/
+}
+.menu__item + .menu__item{ /*делает отступ слева и у соседа*/
+	padding-left: 10px;
+}
+.menu__link{
+	text-transform: uppercase; /*делает все символы большими*/
+	padding: 42px 20px; /*отступы внутренние*/
+	transition: all 0.3s; /*плавность hover (и бекграунт и цвет текста)*/
+	color: #131313;
+}
+.menu__link:hover{ /*эффект при наведении */
+	background-color: #131313;
+	color: #fff;
+}
+.bike{
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.bike__inner{
+	display: flex; /*делает контент в строку*/
+	justify-content: space-between;/*разбрасывает контент по краям строки*/
+}
+.bike__column-slider{
+	flex-basis: 630px; /*флексовая ширина блока*/
+	margin-left: 30px;
+	max-width: 630px;
+}
+.bike__title{
+	font-weight: 700; /*стиль шрифта*/
+	font-size: 64px;
+	line-height: 77px;/*межстрочное расстояние*/
+	margin: 60px 0 5px;
+	color: #131313;
+}
+.bike__subtitle{
+	font-weight: 400; /*стиль шрифта*/
+	margin: 0 0 60px;
+	font-size: 32px;
+	line-height: 39px;/*межстрочное расстояние*/
+	color: #6F6F6F;
+}
+.bike__text{
+	font-size: 14px;
+	line-height: 120%;/*межстрочное расстояние*/
+	margin-bottom: 20px;
+	max-width: 420px; /*максимальная ширина блока*/
+	color: #131313;
+}
+.bike__link{	
+	margin-top: 80px;
+	display: inline-block; /*элемент строчный но можно применять стили как для блочного*/
+	background-color: #131313;
+	color: #fff;
+	padding: 30px 80px;
+	text-transform: uppercase; /*все буквы большие*/
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px; /*межстрочное расстояние*/
+	letter-spacing: 1.1em;/*расстояние между букв*/
+	transition: all 0.5s;
+}
+.bike__link:hover{
+	background-color: #ff4040;
+	transition: all 0.5s;
+}
+.bike-slider .slick-dots{
+	right: 0;
+	top: 50px;
+}
+.slick-dots{ /*стиль для слайдера*/
+	position: absolute;
+}
+.slick-dots li + li{
+	padding-top: 10px;
+}
+.slick-dots button{
+	font-size: 0;
+	background-color: #131313;
+	width: 3px;
+	height: 25px;
+	border-radius: 7px; /*скругление кнопки слайдера*/
+	transition: all 0.3s; /*скорость плавности при убирание курсора*/
+}
+.slick-dots button:hover{
+	background-color: #ff4040; /*цвет при навидении*/
+}
+.slick-active button{
+	background-color: #ff4040; /*цвет кнопки выбранного изображения*/
+}
+.bike__list{
+	margin-top: 25px;
+	display: flex;
+	justify-content: space-around; /*добавляет пространство между элументами равно самому элементу*/
+}
+.bike__list-item{
+	min-width: 160px;
+	display: flex; /*делает контент в строку*/
+	flex-direction: column; /*делает контент в колонку*/
+	align-items: center; /*контент выравнивается по вертикали*/
+	text-align: center; /*текст выравнивается по вертикали */
+	min-height: 58px; /*мин. высота*/
+}
+.bike__list-num{
+	font-size: 14px;
+	line-height: 17px;/*межстрочное расстояние*/
+	text-transform: uppercase;
+	color: #131313;
+	font-weight: 700;
+}
+.bike__list-text{
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 15px;
+	color: #131313;
+	margin: auto 0; /*текст выравнивается по высоте по центру*/
+}
+.info{
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+.info__inner{
+	display: flex;/*делает контент в строку*/
+}
+.info__img{
+	margin-right: 60px;
+	flex-basis: 570px; /*устанавливает базовый размер элемента */
+	object-fit: cover; /*значение указывает элементу заполнять пространство или нет*/
+}
+.info__list{
+	flex-basis: 490px;/*устанавливает базовый размер элемента */
+}
+.info__item + .info__item{
+	padding-top: 50px;
+}
+.info__item-title{
+	margin-bottom: 10px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	text-transform: uppercase;
+	color: #131313;
+}
+.info__item-text{
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 120%;
+	color: #131313;
+	max-width:  450px; /*маесимальная ширина*/
+}
+.characteristics{
+	padding-top: 50px;
+	padding-bottom: 150px;
+}
+.characteristics__head{
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	text-transform: uppercase;
+	color: #131313;
+	margin: 0 0 40px;
+}
+.characteristics__inner{
+	display: flex;
+}
+.characteristics__img{
+	align-self: center;/*контент выравнивается по вертикали*/
+}
+.characteristics__items{
+	flex-basis: 570px;
+	margin-right: 60px; 
+}
+.characteristics__list + .characteristics__list{ /*обращаемся к блоку и его соседу ниже*/
+	padding-top: 30px;
+}
+.characteristics__list{
+	padding-right: 5px;
+}
+.characteristics__title{
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	background-color: #131313;
+	padding: 2px 0 3px;
+	margin-bottom: 5px;
+}
+.characteristics__line{
+	display: flex; /*сделало элемент в строку */
+	padding-top: 5px;
+}
+.characteristics__name{
+	flex-basis: 285px; /*флексовая ширина */
+	padding-right: 25px;
+}
+.characteristics__descr{
+	flex-basis: 285px; /*флексовая ширина */
+}
+.slider{
+	padding-bottom: 50px;
+}
+.slider__items .slick-dots{
+	top: 0;
+	left: 0;
+}
+.slider__item{
+	padding-left: 50px;
+}
+.price{
+	padding-bottom: 100px;
+}
+.price__inner{
+	position: relative;
+}
+.form{
+	max-width: 420px;
+}
+.form__title{
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	text-transform: uppercase;
+	color: #131313;
+	margin-bottom: 40px;
+}
+.form__text{
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 120%;
+	color: #131313;
+	max-width: 300px;
+	margin-bottom: 30px;
+}
+.form__input-name, .form__input-phone{
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #131313;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	outline: none; /*убирает рамку при нажатии*/ 
+}
+.form__input-name::placeholder,
+.form__input-phone::placeholder{ /*текст подсказка в форме*/
+	color: #6f6f6f;
+	opacity: 0.5;
+}
+.form__input-text{
+	color: #6f6f6f;
+	opacity: 0.5;
+	margin-bottom: 10px;
+}
+.form__label-box{
+	display: flex;
+	margin-bottom: 50px;
+}
+.form__input-radio{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0); 
+}
+.form__input-radio:checked + .form__bike{
+	display: block;
+}
+.form__bike{
+	display: none;
+	position: absolute;
+	top: 0; /*сдвинул картинку к верхнему краю контейнера*/
+	right: 0; /*cсдвинул картинку к правому краю контейнера*/
+}
+.form__radio-style{
+	border-radius: 30px;
+	width: 80px;
+	height: 12px;
+}
+.form__radio-style--gray{
+	background-color: #6F6F6F;
+}
+.form__radio-style--white{
+	background-color: #fff;
+	border: 1px solid #6F6F6F ;
+}
+.form__radio-style--red{
+	background-color: #FF4040;
+}
+.form__label + .form__label{
+	margin-left: 23px;
+}
+.form__btn{
+	background: #131313;
+	width: 420px;
+	height: 80px;
+	color: #fff;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: 1.1em;
+	text-transform: uppercase;
+	padding: 30px 80px;
+	transition: all 0.5s;
+}
+.form__btn:hover{
+	background-color: #ff4040;
+	transition: all 0.5s;
+}
+.form__bike-price{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 32px;
+	color: #131313;
+	position: absolute;
+	top: 30px ;
+	left: 0;
+	right: 0;
+	width: 220px;
+	height: 100px;
+	border: 1px solid #ff4040;
+	border-radius: 50%;
+	transform: translateX(-50%);
+}
+.form__bike-price::after{
+	content: '';
+	position: absolute;
+	width: 220px;
+	height: 100px;
+	border: 1px solid #ff4040;
+	border-radius: 50%;
+	top: 12px;
+	left: 0;
+}
+.footer{
+	background-color: #131313;
+}
+.footer__inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100px;
+}
+.footer__link{
+	font-size: 12px;
+	line-height: 12px;
+	text-transform: lowercase;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+}
+.footer__social-link + .footer__social-link{
+	margin-left: 25px;
+}
+.footer__contacts-link{
+	display: flex;
+	align-items: center;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: lowercase;
+	color: #fff;
+}
+.footer__contacts-link + .footer__contacts-link{
+	margin-top: 10px;
+}
+.footer__contacts-img{
+	margin-right: 10px;
+}
